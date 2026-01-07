@@ -54,7 +54,7 @@ setInterval(() => {
 }, 5000);
 
 
-// ====== КУРСИ ВАЛЮТ (БАЗА — ГРИВНЯ) ======
+//  КУРСИ ВАЛЮТ (БАЗА — ГРИВНЯ)
 const ratesBox = document.querySelector(".ratesBox");
 
 if (ratesBox) {
