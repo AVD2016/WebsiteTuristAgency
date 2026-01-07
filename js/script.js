@@ -58,12 +58,13 @@ setInterval(() => {
 const ratesBox = document.querySelector(".ratesBox");
 
 if (ratesBox) {
-    const proxy = "https://api.allorigins.win/raw?url=";
+    const proxy = "https://api.allorigins.win/get?url=";
     const apiUrl =
         "https://api.exchangerate.host/live?access_key=44c865a204793b36031466e8614b9797&currencies=EUR,CHF,GBP,PLN,UAH";
 
     fetch(proxy + encodeURIComponent(apiUrl))
         .then(res => res.json())
+        .then(res => JSON.parse(res.contents))
         .then(data => {
             if (!data.success) {
                 ratesBox.textContent = "Не вдалося отримати курси валют.";
